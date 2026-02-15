@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+
+/* ===== 基本設定 ===== */
+:root { 
+  color-scheme: light dark; 
+}
+
+body { 
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif; 
+  margin: 24px; 
+}
+
+.wrap { 
+  max-width: 980px; 
+  margin: 0 auto; 
+}
+
+/* ===== 工具列 ===== */
+.toolbar{
+  display:flex; 
+  gap:12px; 
+  align-items:center; 
+  flex-wrap:wrap;
+  padding:12px; 
+  border:1px solid #ccc; 
+  border-radius:12px;
+}
+
+.toolbar input[type="search"]{
+  flex:1; 
+  min-width:220px;
+  padding:10px 12px; 
+  border-radius:10px; 
+  border:1px solid #bbb;
+  font-size:14px;
+}
+
+.toolbar label{ 
+  font-size:14px; 
+  user-select:none; 
+}
+
+.toolbar button{
+  padding:10px 12px; 
+  border-radius:10px; 
+  border:1px solid #bbb;
+  background: transparent; 
+  cursor:pointer;
+}
+
+/* ===== 表格 ===== */
+.meta { 
+  margin: 10px 2px 0; 
+  font-size: 13px; 
+  opacity: .75; 
+}
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  margin-top: 14px; 
+}
+
+th, td { 
+  border-bottom: 1px solid #ddd; 
+  padding: 10px 8px; 
+  vertical-align: top; 
+}
+
+th { 
+  text-align: left; 
+  font-weight: 700; 
+}
+
+tr.hidden { 
+  display: none; 
+}
+
+mark { 
+  padding: 0 2px; 
+  border-radius: 4px; 
+}
+
+.empty { 
+  padding: 14px; 
+  border: 1px dashed #bbb; 
+  border-radius: 12px; 
+  margin-top: 14px; 
+  display:none; 
+}
+
+.kbd { 
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; 
+  padding: 2px 6px; 
+  border: 1px solid #aaa; 
+  border-radius: 6px; 
+  font-size: 12px; 
+}
+
+/* ===== 答案 + 複製按鈕 ===== */
+.a-wrap{
+  display:flex; 
+  gap:10px; 
+  align-items:flex-start; 
+  justify-content:space-between;
+}
+
+.a-text{ 
+  flex:1; 
+  min-width: 0; 
+}
+
+.copy-btn{
+  white-space:nowrap;
+  padding:6px 10px;
+  border-radius:10px;
+  border:1px solid #bbb;
+  background: transparent;
+  cursor:pointer;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.copy-btn:active{ 
+  transform: translateY(1px); 
+}
+
+.copy-btn.copied{
+  border-color: currentColor;
+  opacity: .9;
+}
+
+/* ===== 古風標題 ===== */
+.page-title{
+  margin: 10px 0 6px 0;
+  text-align: center;
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 42px;
+  letter-spacing: 6px;
+
+  background: linear-gradient(90deg, #f7d77a, #fff5c2, #c89b2c);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition: background-position 0.8s ease;
+}
+
+.page-title:hover{
+  background-position: 200% center;
+}
+
+.page-subtitle{
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.title-line{
+  width: 180px;
+  height: 1px;
+  margin: 12px auto;
+  background: linear-gradient(to right, transparent, #c89b2c, transparent);
+}
+
+/* ===== 回到頂部按鈕 ===== */
+#backTop {
+    display: none; /* 預設隱藏 */
+    position: fixed; /* 固定位置 */
+    bottom: 20px; /* 距離底部 20px */
+    right: 20px; /* 距離右邊 20px */
+    z-index: 99; /* 確保在最上層 */
+    padding: 10px 15px;
+    background-color: #555; /* 背景顏色 */
+    color: white; /* 文字顏色 */
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#backTop:hover {
+    background-color: #333; /* 滑鼠移入顏色 */
+}
+.source-section{
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.source-line{
+  width: 160px;
+  height: 1px;
+  margin: 20px auto 10px auto;
+  background: linear-gradient(to right, transparent, #c89b2c, transparent);
+}
+
+.source-text a{
+  color: #c89b2c;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.source-text a:hover{
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+/* ===== 來源區塊 ===== */
+.source-section{
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.source-line{
+  width: 160px;
+  height: 1px;
+  margin: 20px auto 10px auto;
+  background: linear-gradient(to right, transparent, #c89b2c, transparent);
+}
+
+.source-text a{
+  color: #c89b2c;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.source-text a:hover{
+  text-decoration: underline;
+  opacity: 0.85;
+}
